@@ -10,5 +10,13 @@ class MakersBNB < Sinatra::Base
     'Hello World'
   end
 
+  get '/login_confirmation' do
+    "your logged in"
+  end
+  
+  get '/login' do
+    erb :"logging_in"
+  end
+
   run! if app_file == $0
 end
