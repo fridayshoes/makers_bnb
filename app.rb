@@ -7,7 +7,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/' do
-    'Hello World'
+    erb :index
   end
 
   get '/login_confirmation' do
@@ -17,6 +17,7 @@ class MakersBNB < Sinatra::Base
   get '/login' do
     erb :"logging_in"
   end
+  
 
   run! if app_file == $0
 end
