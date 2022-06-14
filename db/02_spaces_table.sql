@@ -1,0 +1,1 @@
+CREATE TABLE spaces_table(space_id SERIAL PRIMARY KEY, account_id INT REFERENCES accounts_table(account_id), space_name VARCHAR(50), description VARCHAR(500), price_per_night DECIMAL(6,2));											
