@@ -16,4 +16,12 @@ describe Rental do
     expect(spaces).to include("country cottage in Yorkshire")
     end
   end
+
+  describe'.create' do
+    it 'creates a new space' do
+      Rental.create(space_name: 'fabulous seaviews')
+
+      expect(Rental.all).to include 'fabulous seaviews'
+    end
+  end
 end  
