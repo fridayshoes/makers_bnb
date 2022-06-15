@@ -1,5 +1,7 @@
 # at the top of spec/spec_helper.rb
+
 require_relative './setup_test_database'
+
 # Set the environment to "test"
 ENV['ENVIRONMENT'] = 'test'
 

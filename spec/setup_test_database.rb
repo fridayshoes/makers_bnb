@@ -1,8 +1,7 @@
 require 'pg'
 
+p "Setting up test database..."
 def setup_test_database
-  p "Setting up test database..."
   connection = PG.connect(dbname: 'makersbnb_database_test')
-
-  connection.exec("TRUNCATE spaces_table;")
+  connection.exec("TRUNCATE TABLE spaces_table, accounts_table;")
 end
