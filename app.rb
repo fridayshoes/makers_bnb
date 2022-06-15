@@ -10,15 +10,11 @@ class MakersBNB < Sinatra::Base
   get '/' do
     erb :index
   end
-
-  get '/login_confirmation' do
-    "your logged in"
-  end
   
   get '/login' do
     erb :"logging_in"
   end
-  
+
 
   get '/spaces' do
     @spaces = Rental.all

@@ -1,4 +1,4 @@
-require 'account.rb'
+require 'account'
 
 describe Accounts do
   describe ".all" do

@@ -1,5 +1,5 @@
 feature "view all spaces" do
-  scenario "a user views a list of all spaces" do
+  xscenario "a user views a list of all spaces" do
     connection = PG.connect(dbname: 'makersbnb_database_test')
 
     connection.exec("INSERT INTO spaces_table (space_name) VALUES ('nice, sunny room');")  
