@@ -5,7 +5,7 @@ class Booking
     @space_name = space_name
   end
 
-  def self.book(space_name:)
+  def self.book
     if ENV["ENVIRONMENT"] == "test"
       connection = PG.connect(dbname: "makersbnb_database_test")
     else

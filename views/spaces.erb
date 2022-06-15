@@ -1,5 +1,8 @@
 <ul>
   <% @spaces.each do |space| %>
     <li><%= space %></li>
+    <a href="/booking_status">
+    <input type="button" value="Request to book">
+    </a>
     <%end%>
   </ul>
