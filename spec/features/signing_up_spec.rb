@@ -1,5 +1,5 @@
 feature 'user signing up' do
-  xscenario 'signs up' do
+  scenario 'signs up' do
     visit('/sign_up')
     fill_in :first_name, with: 'Rik'
     fill_in :last_name, with: 'Mayal'
