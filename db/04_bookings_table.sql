@@ -1,0 +1,1 @@
+CREATE TABLE bookings_table(booking_id SERIAL PRIMARY KEY, space_id INT REFERENCES spaces_table(space_id), account_id INT REFERENCES accounts_table(account_id), booked_from_date DATE, booked_to_date DATE, requested BOOLEAN, approved BOOLEAN);				

@@ -1,4 +1,4 @@
-require 'booking'
+require 'booking.rb'
 
 feature "booking of a space requested" do
   scenario "by a user" do
