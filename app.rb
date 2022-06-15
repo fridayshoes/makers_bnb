@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/rental'
 
 class MakersBNB < Sinatra::Base
   configure :development do
@@ -16,6 +17,20 @@ class MakersBNB < Sinatra::Base
   
   get '/login' do
     erb :"logging_in"
+  end
+
+  get '/spaces' do
+    @spaces = Rental.all
+    erb :spaces
+  end
+
+  get '/spaces/new' do
+    erb :new
+  end
+
+  post '/spaces' do
+    Rental.create(space_name: params[:space_name])
+    redirect '/spaces'
   end
 
   run! if app_file == $0
