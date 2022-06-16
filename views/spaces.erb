@@ -1,9 +1,3 @@
-<ul>
-  <% @spaces.each do |space| %>
-   <li class="rental" id="space-<%= space.id %>">  <% #RACKUP SHOWS US THIS LINE IS WRONG %>
-      <form action="/booking_status/<%= space.id %>" method="get">
-        <input type="submit" value="Request to book" />
-        </form>
-    </li>
-    <% end %>
-  </ul>
+<% @spaces.each do |space| %>
+  <li><%= space.space_name%> <%= space.description%> <%=space.price_per_night %></li>
+<%end%>
