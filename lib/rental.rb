@@ -1,6 +1,14 @@
 require 'pg'
 
 class Rental
+
+  attr_reader :id, :space_name
+
+  def initialize(id:, space_name:)
+    @id = id
+    @space_name = space_name
+  end
+
   def self.all
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'makersbnb_database_test')

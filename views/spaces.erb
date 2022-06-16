@@ -1,8 +1,9 @@
 <ul>
   <% @spaces.each do |space| %>
-    <li><%= space %></li>
-    <a href="/booking_status">
-    <input type="button" value="Request to book">
-    </a>
-    <%end%>
+   <li class="rental" id="space-<%= space.id %>">  <% #RACKUP SHOWS US THIS LINE IS WRONG %>
+      <form action="/booking_status/<%= space.id %>" method="get">
+        <input type="submit" value="Request to book" />
+        </form>
+    </li>
+    <% end %>
   </ul>

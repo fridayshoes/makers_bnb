@@ -19,7 +19,6 @@ class MakersBNB < Sinatra::Base
     erb :"logging_in"
   end
   
-
   get '/spaces' do
     @spaces = Rental.all
     erb :spaces
@@ -34,8 +33,9 @@ class MakersBNB < Sinatra::Base
     redirect '/spaces'
   end
 
-  get '/booking_status' do
-    erb :booking_status
+  get '/booking_status/' do
+    @id = params[:id]
+  erb :booking_status
   end
 
   run! if app_file == $0
