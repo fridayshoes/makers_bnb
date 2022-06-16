@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/rental'
+require './lib/account'
 
 class MakersBNB < Sinatra::Base
   configure :development do
@@ -10,11 +11,16 @@ class MakersBNB < Sinatra::Base
   get '/' do
     erb :index
   end
+
+  post '/login' do
+    Accounts.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email],username: params[:username], password: params[:password])
+    redirect '/login'
+  end
   
   get '/login' do
-    erb :"logging_in"
+    erb :logging_in
   end
-
+  
 
   get '/spaces' do
     @spaces = Rental.all
@@ -22,11 +28,11 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/spaces/new' do
-    erb :new
+    erb :spaces_new
   end
 
   post '/spaces' do
-    Rental.create(space_name: params[:space_name])
+    Rental.create(space_name: params[:space_name], description: params[:description], price_per_night: params[:price_per_night])
     redirect '/spaces'
   end
 

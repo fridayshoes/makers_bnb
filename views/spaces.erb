@@ -1,5 +1,4 @@
-<ul>
-  <% @spaces.each do |space| %>
-    <li><%= space %></li>
-    <%end%>
-  </ul>
+
+<% @spaces.each do |space| %>
+  <li><%= space.space_name%> <%= space.description%> <%=space.price_per_night %></li>
+<%end%>
