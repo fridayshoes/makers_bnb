@@ -1,6 +1,6 @@
 feature 'user signing up' do
   scenario 'signs up' do
-    visit('/sign_up')
+    visit('/')
     fill_in :first_name, with: 'Rik'
     fill_in :last_name, with: 'Mayal'
     fill_in :email, with: 'rik@bottom.com'
