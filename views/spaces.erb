@@ -1,3 +1,8 @@
 <% @spaces.each do |space| %>
-  <li><%= space.space_name%> <%= space.description%> <%=space.price_per_night %></li>
-<%end%>
+  <li>
+  <%= space.space_name%> <%= space.description%> <%=space.price_per_night %></li>
+  <form action="/booking_status/<%= space.space_id %>" method="get">
+  <input type="submit" value="Request to book" />
+  </form>
+  </li>
+<% end %>

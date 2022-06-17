@@ -33,8 +33,8 @@ class MakersBNB < Sinatra::Base
     redirect '/spaces'
   end
 
-  get '/booking_status/' do
-    @id = params[:id]
+  get '/booking_status' do
+    @space_id = params[:space_id]
   erb :booking_status
   end
 
