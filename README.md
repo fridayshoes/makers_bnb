@@ -26,7 +26,7 @@ MVC
 
 ![](diagrams/User_journey2.png)
 
-![](diagrams/Database Schema.png)
+![](diagrams/Database_Schema.png)
 -------
 
 ## Getting started
