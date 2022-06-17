@@ -31,7 +31,7 @@ class Rental
     end
 
     
-    result = connection.exec_params("INSERT INTO spaces_table (space_name, description, price_per_night) VALUES($1, $2, $3) RETURNING space_id, space_name, description, price_per_night;", [space_id, space_name, description, price_per_night])
+    result = connection.exec_params("INSERT INTO spaces_table (space_name, description, price_per_night) VALUES($1, $2, $3) RETURNING space_id, space_name, description, price_per_night;", [space_name, description, price_per_night])
     Rental.new(space_id: result[0]["space_id"], space_name: result[0]["space_name"], description: result[0]["description"], price_per_night: result[0]["price_per_night"])
   end
 end
