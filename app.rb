@@ -24,6 +24,7 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces' do
     @spaces = Rental.all
+    p @spaces.first
     erb :spaces
   end
 
@@ -34,6 +35,11 @@ class MakersBNB < Sinatra::Base
   post '/spaces' do
     Rental.create(space_name: params[:space_name], description: params[:description], price_per_night: params[:price_per_night])
     redirect '/spaces'
+  end
+
+  get '/booking_status' do
+    p params
+    "Awaiting confirmation"
   end
 
   run! if app_file == $0
