@@ -1,6 +1,65 @@
-<form action="/spaces" method="post">
-  <input type="text" name="space_name" />
-  <input type="text" name="description" />
-  <input type="number" name="price_per_night" step=".02" />
-  <input type="submit" value="List my space" />
-</form>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css">
+  <style>
+  h1 {text-align: center;}
+  p {text-align: center;}
+  div {text-align: center;}
+  input {text-align: center;}
+  b {color: #ef0101;}
+  body { 
+    background-image: url("https://www.build-review.com/wp-content/uploads/2022/02/Air-bnb.jpg");
+    background-color: #cccccc;
+  }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+  <title>Makers BNB</title>
+  </head>
+  <body>
+    <div id="image"></div>
+      <div class="row">
+        <div class="col-md-6 mx-auto"><h2 style="color: Dark; padding: 30px;">Makers BNB</h1>
+        </div>
+        <div class="col-md-6 mx-auto">
+        <br>
+          <div style="width: 100%;">
+            <div style="display: inline-flex;">
+              <h4 style="padding: 10px;"><a href="/login">Login</a></h4>
+              <h4 style="padding: 10px;"><a href="/spaces">Spaces</a></h4>
+            </div>
+          </div>  
+        <br>
+      </div>
+      <div class="row">
+      <h1 style="color: Tomato;">LIST YOUR SPACE</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form style="margin: auto; width: 220px;" action="/spaces" method="post">
+          <label for="first_name_id"><b>Space Name</b></label>
+          <input type="text" placeholder="Enter Space Name" name="space_name" />
+          <br>
+          <br>
+          <label for="first_name_id"><b>Description</b></label>
+          <input type="text" placeholder="Description" name="description" />
+          <br>
+          <br>
+          <label for="first_name_id"><b>Price Per Night</b></label>
+          <input type="number" placeholder="Price Per Night" name="price_per_night" step=".01" />
+          <br>
+          <br>          
+          <input type="submit" value="List my space" />
+          </form>
+        </div>  
+      </div>
+      <div class="row">
+      <div>
+        <br>
+        <br>
+        <p>Powered by Budds, Raisin, Alimi, Evans & Johnson</p>
+      </div>
+      </div>  
+    </div>
+  </body>
+</html>
