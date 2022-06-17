@@ -24,6 +24,7 @@ class MakersBNB < Sinatra::Base
 
   get '/spaces' do
     @spaces = Rental.all
+    p @spaces.first
     erb :spaces
   end
 
@@ -37,6 +38,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/booking_status' do
+    p params
     "Awaiting confirmation"
   end
 
