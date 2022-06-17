@@ -1,4 +1,50 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css">
+  <style>
+  h1 {text-align: center;}
+  p {text-align: center;}
+  div {text-align: center;}
+  input {text-align: center;}
+  b {color: #ef0101;}
+  li {color: #ffffff;}
+  body { 
+    background-image: url("https://images.dwell.com/photos/6063391372700811264/6858923650872406016/large.jpg");
+    background-color: #cccccc;
+  }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+  <title>Makers BNB</title>
+  </head>
+  <body>
+    <div>
+    <div id="image"></div>
+    <div class="row">
+      <div class="col-md-6 mx-auto"><h2 style="color: #000; padding: 30px;">Makers BNB</h1>
+      </div>
+      <div class="col-md-6 mx-auto">
+      <br>
+        <div style="width: 100%;">
+          <div style="display: inline-flex;">
+            <h4 style="padding: 10px;"><a href="/login">Login</a></h4>
+            <h4 style="padding: 10px;"><a href="/spaces/new">List New Space</a></h4>
+          </div>
+        </div>  
+      <br>
+    </div>
+    <div class="row">
+    <h1 style="color: Tomato;">CHOOSE YOUR SPACE</h1>
+    </div>
+    <div class="row">
+    
+    
+      <% @spaces.each do |space| %>
+        <li><%= space.space_name%> -- <%= space.description%> -- £<%=space.price_per_night %></li>
+      <%end%>
 
-<% @spaces.each do |space| %>
-  <li><%= space.space_name%> <%= space.description%> <%=space.price_per_night %></li>
-<%end%>
+    
+    </div>
+    </div>
+  </body>
+</html>
