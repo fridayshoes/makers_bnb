@@ -61,9 +61,9 @@ In command line type `rspec`
 
 ## Screenshots
 
-![](diagrams/MakersBNB_Homepage.png)
+![](diagrams/MakersBNB_HomePage.png)
 
-![](diagrams/MakersBNB_Loginpage.png)
+![](diagrams/MakersBNB_LoginPage.png)
 
 ![](diagrams/MakersBNB_SpacesPage.png)
 
