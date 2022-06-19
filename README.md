@@ -57,4 +57,14 @@ Navigate to local host (usually 9292)
 
 ## Running tests
 
-In command line type `rspec` 
+In command line type `rspec`
+
+## Screenshots
+
+![](diagrams/MakersBNB_Homepage.png)
+
+![](diagrams/MakersBNB_Loginpage.png)
+
+![](diagrams/MakersBNB_SpacesPage.png)
+
+![](diagrams/MakersBNB_SpacesNewPage.png)
